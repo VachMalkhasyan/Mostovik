@@ -1,74 +1,95 @@
 <template>
-  <header class="top">
-    <div class="container">
-      <p>1234-5678-9012</p>
-      <p>support@Construct.com</p>
-      <p>Mon-Sat 9:00-19:00</p>
-      <div class="social">
-        <a href="#" title="Facebook" class="icon facebook"></a>
-        <a href="#" class="icon twitter"></a>
-        <a href="#" class="icon behance"></a>
-        <a href="#" class="icon basketball"></a>
-        <a href="#" class="icon linkedin"></a>
-        <a href="#"><img src="@/assets/logo.svg" alt="YouTube"></a>
+  <div class="about-us">
+    <div class="background-image"></div>
+    <div class="content">
+      <h2>Մենք հավաստագրված ինժեներներ ենք</h2>
+      <h1>ՇԻՆԱՐԱՐԱԿԱՆ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ <br>
+       <span style="color: #f6b500">ԿՐԵԱՏԻՎ ԵՎ ՊՐՈՖԵՍԻՈՆԱԼ ԿԵՐՊՈՎ</span> </h1>
+      <h3>Մեր ընկերությունը շուկայում է ավելի քան <span style="font-weight:bold"> 20</span>
+          տարի</h3>
+      <div class="buttons">
+        <button @click="handleFirstButtonClick">ՏԵսնել գործերը</button>
+        <button @click="handleSecondButtonClick">Կապ մեզ հետ</button>
       </div>
     </div>
-  </header>
+  </div>
+  <Welcome/>
+  <WhyChooseUs></WhyChooseUs>
 </template>
 
 <script>
+import WhyChooseUs from "@/components/WhyChooseUs.vue";
+import Welcome from "@/components/Welcome.vue";
 export default {
-  name: 'TopHeader'
+  name: 'AboutUs',
+  components:{
+    WhyChooseUs,
+    Welcome
+  },
+  methods: {
+    handleFirstButtonClick() {
+      // Handle the first button click
+      console.log('First button clicked');
+    },
+    handleSecondButtonClick() {
+      // Handle the second button click
+      console.log('Second button clicked');
+    }
+  }
 }
 </script>
 
 <style scoped>
-/* Container styles */
-.container {
+.about-us {
+  position: relative;
+  width: 100%;
+  height: 70vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #f8f9fa;
+  color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
-/* Typography styles */
-p {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('src/assets/Images/AboutUsBackground.jpg'); /* Replace with your background image URL */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
-/* Social media icons */
-.social {
-  display: flex;
-  gap: 10px;
+.content {
+  position: relative;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
 }
 
-.social a {
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  color: #c79e23;
+  background-color: #000;
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  padding: 8px 15px;
+  margin-left: 5px;
+  border: solid 1px #c79e23;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* Individual icons */
-.icon.facebook {
-  background-image: url('@/assets/icons/facebook.svg');
-}
-
-.icon.twitter {
-  background-image: url('@/assets/icons/twitter.svg');
-}
-
-.icon.linkedin {
-  background-image: url('@/assets/icons/linkedin.svg');
-}
-
-/* Replace with the actual path to your SVG icons */
-img {
-  width: 24px;
-  height: 24px;
+button:hover {
+  background-color: #c79e23;
+  color: #000;
 }
 </style>

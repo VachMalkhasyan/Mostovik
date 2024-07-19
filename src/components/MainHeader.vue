@@ -4,7 +4,7 @@
       <div class="container">
         <div class="headerInfo">
           <div>
-            <i class="material-icons">call</i><p>099220675</p>
+            <i class="material-icons">call</i><p>+37499220675</p>
           </div>
           <div>
             <i class="material-icons">email</i><p>mostovikltd@gmail.com</p>
@@ -61,11 +61,11 @@ export default {
   align-items: center;
   padding: 20px;
   margin: 0 auto;
+
 }
 
 .top-bar {
   background-color: #f6b500;
-  padding: 10px 0;
 }
 
 .top-bar .container {

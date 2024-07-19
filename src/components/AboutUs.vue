@@ -4,8 +4,8 @@
     <div class="content">
       <h2>Մենք հավաստագրված ինժեներներ ենք</h2>
       <h1>ՇԻՆԱՐԱՐԱԿԱՆ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ <br>
-       <span style="color: #f6b500">ԿՐԵԱՏԻՎ ԵՎ ՊՐՈՖԵՍԻՈՆԱԼ ԿԵՐՊՈՎ</span> </h1>
-      <h3>Մեր ընկերությունը շուկայում է ավելի քան <span style="font-weight:bold"> 20</span>
+       <span style="color: #f6b500">ԿԱՄՐՋԱՇԻՆՈՒԹՅԱՆ և ՃԱՆԱՊԱՐՀԱՇԻՆՈՒԹՅԱՆ <br> ՈԼՈՐՏԻ ԱՇԽԱՏԱՆՔՆԵՐՈՒՄ</span> </h1>
+      <h3>Մեր ընկերությունը շուկայում է ավելի քան <span style="font-weight:bold"> 25</span>
           տարի</h3>
       <div class="buttons">
         <button @click="handleFirstButtonClick">ՏԵսնել գործերը</button>

@@ -2,10 +2,26 @@
   <header>
     <div class="top-bar">
       <div class="container">
-        <p>093111111</p>
-        <p>support@mostovik.am</p>
-        <p>Երկ-Ուրբաթ 9:00-18:00</p>
+        <div class="headerInfo">
+          <div>
+            <i class="material-icons">call</i><p>099220675</p>
+          </div>
+          <div>
+            <i class="material-icons">email</i><p>mostovikltd@gmail.com</p>
+          </div>
+          <div>
+            <i class="material-icons">work</i> <p>Երկ-Ուրբաթ 9:00-18:00</p>
+          </div>
+
+        </div>
+
+
         <div class="social">
+          <div class="headerLinks">
+            <a href="https://www.facebook.com/profile.php?id=100034597899041&locale=ru_RU" target="_blank" rel="noopener noreferrer">
+              <i class="material-icons">facebook</i>
+            </a>
+          </div>
           <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#"><i class="fa-brands fa-twitter"></i></a>
           <a href="#"><i class="fa-brands fa-behance"></i></a>
@@ -63,10 +79,18 @@ export default {
   color: #fff;
   font-size: 14px;
 }
+.material-icons {
+  font-size: 24px;
+  color: #070000; /* Facebook blue color */
+  text-decoration: none;
+}
 
 .top-bar .social {
   display: flex;
   gap: 10px;
+}
+a {
+  text-decoration: none;
 }
 
 .top-bar .social a {
@@ -114,6 +138,27 @@ nav a:hover {
   color: #f6b500;
 }
 
+.headerInfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.headerInfo p{
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+}
+.headerInfo div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px
+}
+.headerLinks{
+  display: flex;
+  align-items: end;
+}
 .search-icon {
   color: #fff;
   font-size: 1.2rem;

@@ -3,11 +3,12 @@
     <div class="container">
       <article>
         <h1>Բարի գալուստ <span style="color: #f6b500">MOSTO</span>VIK</h1>
-        <h2>Lorem ipsum dolor sit amet.</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate deserunt magni sint mollitia similique corporis quis voluptatibus, eos tempora ealias illo nemo excepturi blanditiis vitae impedit minus tempore praesentium harum.
-          <br><br>
-          Quis, temporibus dolorum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit maxime minima quod eius aspernatur. Accusantium sed sunt corrupti sapiente deleniti?
+          «Մոստովիկ» շինարարական ընկերությունն ավելի քան 25 տարի հիմնաքար է շինարարության ոլորտում: Հայտնի է կամուրջների կառուցման և ասֆալտապատման ոլորտում իր փորձառությամբ՝ Մոստովիկը հետևողականորեն իրականացրել է բարձրորակ ենթակառուցվածքային նախագծեր, որոնք դիմանում են ժամանակի փորձությանը:
+
+          <br> <p style="font-weight: bold">Փորձ</p>  <br>
+
+          Քառորդդարյա փորձառությամբ Մոստովիկը կատարելագործել է իր հմտություններն ու գիտելիքները շինարարության ոլորտում: Ընկերության երկարակեցությունը վկայում է գերազանցության, նորարարության և հաճախորդների գոհունակության նկատմամբ նրա հանձնառության մասին: Տարիների ընթացքում Mostovik-ն իրականացրել է բազմաթիվ բարձրակարգ նախագծեր, որոնցից յուրաքանչյուրն արտացոլում է ընկերության նվիրվածությունը ճշգրտությանը, անվտանգությանը և ամրությանը:
         </p>
         <a href="#">Show More</a>
       </article>

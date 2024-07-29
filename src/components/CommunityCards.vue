@@ -18,6 +18,12 @@
 </template>
 
 <script>
+import cardbackground1 from '@/assets/cardbackground1.jpg';
+import cardbackground2 from '@/assets/cardbackground2.jpg';
+import cardbackground3 from '@/assets/cardbackground3.jpg';
+import cardbackground4 from '@/assets/cardbackground4.jpg';
+import cardbackground5 from '@/assets/cardbackground5.jpg';
+
 export default {
   name: 'CommunityCards',
   props: {
@@ -27,7 +33,14 @@ export default {
   data() {
     return {
       showAll: false,
-      initialDisplayCount: 5
+      initialDisplayCount: 5,
+      images: [
+        cardbackground1,
+        cardbackground2,
+        cardbackground3,
+        cardbackground4,
+        cardbackground5
+      ]
     };
   },
   computed: {
@@ -48,15 +61,7 @@ export default {
       this.showAll = !this.showAll;
     },
     getImageUrl(index) {
-      const images = [
-        '../assets/Images/cardbackground1.jpg',
-        '../assets/Images/cardbackground2.jpg',
-        '../assets/Images/cardbackground3.jpg',
-        '../assets/Images/cardbackground4.jpg',
-        '../assets/Images/cardbackground5.jpg',
-
-      ];
-      return images[index % images.length]; // Cycle through images
+      return this.images[index % this.images.length]; // Cycle through images
     }
   }
 };

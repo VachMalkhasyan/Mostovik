@@ -49,11 +49,11 @@ export default {
     },
     getImageUrl(index) {
       const images = [
-        'src/assets/Images/cardbackground1.jpg',
-        'src/assets/Images/cardbackground2.jpg',
-        'src/assets/Images/cardbackground3.jpg',
-        'src/assets/Images/cardbackground4.jpg',
-        'src/assets/Images/cardbackground5.jpg',
+        '../assets/Images/cardbackground1.jpg',
+        '../assets/Images/cardbackground2.jpg',
+        '../assets/Images/cardbackground3.jpg',
+        '../assets/Images/cardbackground4.jpg',
+        '../assets/Images/cardbackground5.jpg',
 
       ];
       return images[index % images.length]; // Cycle through images

@@ -12,9 +12,7 @@
           <div>
             <i class="material-icons">work</i> <p>Երկ-Ուրբաթ 9:00-18:00</p>
           </div>
-
         </div>
-
 
         <div class="social">
           <div class="headerLinks">
@@ -37,10 +35,12 @@
         <p>ՎՍՏԱՀԵՔ ՁԵՐ ԱՊԱԳԱՆ ՀՈՒՍԱԼԻ ԸՆԿԵՐՈՒԹՅԱՆ</p>
       </h1>
       <nav>
-        <a href="#">Գլխավոր</a>
-        <a href="#">Մեր մասին</a>
-        <a href="#">ՄԵր գործերը</a>
-        <a href="#">Կապ մեզ հետ</a>
+        <a  @click.prevent="scrollTo('aboutUs')">Գլխավոր</a>
+        <a  @click.prevent="scrollTo('welcome')">Մեր մասին</a>
+        <a  @click.prevent="scrollTo('ourServices')">Ծառայություններ</a>
+        <a  @click.prevent="scrollTo('communityCards2020')">Մեր աշխատանքները</a>
+        <a  @click.prevent="scrollTo('productionPage')">Արտադրություն</a>
+
         <i class="fa-solid fa-magnifying-glass" id="search"></i>
       </nav>
     </div>
@@ -49,7 +49,12 @@
 
 <script>
 export default {
-  name: 'MainHeader'
+  name: 'MainHeader',
+  methods: {
+    scrollTo(sectionRef) {
+      this.$emit('scrollTo', sectionRef);
+    }
+  }
 }
 </script>
 

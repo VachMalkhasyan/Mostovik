@@ -1,4 +1,4 @@
-<template>
+<template id="works">
   <div class="community-cards">
     <h2>{{ heading }}</h2>
     <div class="cards-container">

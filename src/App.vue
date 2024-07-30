@@ -1,23 +1,28 @@
+
 <template>
   <div id="app">
-    <Section0 />
-    <AboutUs/>
-    <Welcome/>
-    <WhyChooseUs/>
-    <OurServices/>
-    <h1 style="display: flex; justify-content: center"> ՄԵՐ ԱՇԽԱՏԱՆՔՆԵՐԸ</h1>
+    <MainHeader @scrollTo="scrollTo" />
+    <AboutUs ref="aboutUs" @scrollTo="scrollTo"/>
+    <Welcome ref="welcome" />
+    <WhyChooseUs ref="whyChooseUs" />
+    <OurServices ref="ourServices" />
+    <h1  ref="communityCards2020" style="display: flex; justify-content: center">ՄԵՐ ԱՇԽԱՏԱՆՔՆԵՐԸ</h1>
     <CommunityCards
+
         heading="2020"
         :communities="existingCommunities"
     />
     <CommunityCards
+        ref="communityCards2019"
         heading="2019"
         :communities="communities2019"
     />
     <CommunityCards
+        ref="communityCards2018"
         heading="2018"
         :communities="communities2019"
     />
+    <ProductionPage ref="productionPage" />
   </div>
 </template>
 
@@ -28,6 +33,8 @@ import CommunityCards from './components/CommunityCards.vue';
 import OurServices from "@/components/OurServices.vue";
 import WhyChooseUs from "@/components/WhyChooseUs.vue";
 import Welcome from "@/components/Welcome.vue";
+import ProductionPage from "@/components/ProductionPage.vue";
+import MainHeader from "@/components/MainHeader.vue"; // Import MainHeader
 
 export default {
   name: 'App',
@@ -37,11 +44,12 @@ export default {
     OurServices,
     Section0,
     AboutUs,
-    CommunityCards
+    CommunityCards,
+    ProductionPage,
+    MainHeader // Register MainHeader
   },
   data() {
     return {
-      showComunityCardsSection: false,
       existingCommunities: [
         "Քաղցրաշենի համայնքապետարան NԱՄ-ՀԲՄԱՇՁԲ-20/1-ԱՄ-1",
         "Շահումյանի համայնքապետարան N ԱՄ-ՀԲՄԱՇՁԲ-20/1-ԱՄ-2",
@@ -71,17 +79,27 @@ export default {
         "ՀՀ ՏԿՏՏՆ ՀՀ Արարատի մարզի Մասիսի և Արտաշատի տարածաշրջանների միջպետական և հանրապետական ճանապարհների պահպանում և շահագործում",
       ],
     };
-
+  },
+  methods: {
+    scrollTo(sectionRef) {
+      const section = this.$refs[sectionRef];
+      if (section) {
+        const element = section.$el || section;
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.warn(`No section found with ref: ${sectionRef}`);
+      }
+    }
   }
 };
 </script>
-
 <style>
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 /* For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar */
@@ -112,5 +130,4 @@ body {
   scrollbar-color: #9c7b09 #f0f0f0; /* thumb color and track color */
   scrollbar-width: thin;
 }
-
 </style>

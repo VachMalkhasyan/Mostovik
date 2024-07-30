@@ -8,7 +8,7 @@
       </h1>
       <h3>Մեր ընկերությունը շուկայում է ավելի քան <span style="font-weight:bold"> 25</span> տարի</h3>
       <div class="buttons">
-        <button @click="showCommunityCards">ՏԵՍնել գործերը</button>
+        <button @click="showCommunityCards" @click.prevent="scrollTo('communityCards2020')">ՏԵՍնել գործերը</button>
         <button @click="showContactSection">Կապ մեզ հետ</button>
       </div>
     </div>
@@ -43,6 +43,9 @@ export default {
     },
     closeModal() {
       this.showContactSectionVisible = false;
+    },
+      scrollTo(sectionRef) {
+        this.$emit('scrollTo', sectionRef);
     }
   }
 }

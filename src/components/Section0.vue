@@ -1,6 +1,5 @@
 <template>
   <section id="sec-0">
-    <MainHeader />
   </section>
 </template>
 

@@ -10,7 +10,6 @@
           </div>
           <div class="card-body px-0 pt-4">
             <p>{{ service.description }}</p>
-            <a href="#">Show More</a>
           </div>
         </div>
       </div>

@@ -21,6 +21,7 @@
 import card1 from '@/assets/card1.jpg';
 import card2 from '@/assets/card2.jpg';
 import card3 from '@/assets/card3.jpg';
+
 export default {
   name: 'OurServices',
   data() {
@@ -32,7 +33,6 @@ export default {
           caption: 'Շինարարության կառավարում',
           description: 'Ոլորտում 25 տարվա աշխատանքային փորձով "Մոստովիկ" շինարարական ընկերությունն իրեն հաստատել է որպես շինարարության կառավարման ոլորտի առաջատար: Մենք Գերազանց վերահսկում ենք նախագծերը սկզբից մինչև վերջ ՝ ապահովելով ժամանակին առաքում, բյուջեի համապատասխանություն և ամենաբարձր որակ: Մեր փորձագիտական թիմը համակարգում է կառուցման յուրաքանչյուր ասպեկտ ՝ օգտագործելով տասնամյակների ընթացքում կուտակված նոու-հաուն ՝ բարդ մարտահրավերներին դիմակայելու և հաջողության հասնելու համար:'
         },
-
         {
           imgSrc: card2,
           altText: 'Renovation',
@@ -54,7 +54,7 @@ export default {
 <style scoped>
 #sec-3 {
   padding: 40px 0;
-  background-image:url("../assets/Images/cardbackground1.jpg");
+  background-image: url("../assets/Images/cardbackground1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -117,5 +117,37 @@ h1 {
 
 .card-body a:hover {
   text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    margin: 10px 0;
+  }
+
+  .card img {
+    height: 100px;
+  }
+
+  .caption {
+    font-size: 0.75em;
+  }
+
+  .card-body {
+    padding: 10px;
+    visibility: hidden;
+  }
+
+  .card-body p {
+    font-size: 0.625em;
+  }
 }
 </style>

@@ -23,6 +23,7 @@
         :communities="communities2019"
     />
     <ProductionPage ref="productionPage" />
+    <Footer/>
   </div>
 </template>
 
@@ -34,7 +35,8 @@ import OurServices from "@/components/OurServices.vue";
 import WhyChooseUs from "@/components/WhyChooseUs.vue";
 import Welcome from "@/components/Welcome.vue";
 import ProductionPage from "@/components/ProductionPage.vue";
-import MainHeader from "@/components/MainHeader.vue"; // Import MainHeader
+import MainHeader from "@/components/MainHeader.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: 'App',
@@ -46,7 +48,8 @@ export default {
     AboutUs,
     CommunityCards,
     ProductionPage,
-    MainHeader // Register MainHeader
+    MainHeader,
+    Footer
   },
   data() {
     return {
